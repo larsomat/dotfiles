@@ -16,6 +16,7 @@ export PYTHONIOENCODING='UTF-8';
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 export HISTSIZE='32768';
 export HISTFILESIZE="${HISTSIZE}";
+
 # Omit duplicates and commands that begin with a space from history.
 export HISTCONTROL='ignoreboth';
 
@@ -35,3 +36,23 @@ export GPG_TTY=$(tty);
 
 # Hide the “default interactive shell is now zsh” warning on macOS.
 export BASH_SILENCE_DEPRECATION_WARNING=1;
+
+
+# set automagic java home to default and custom version
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+setjdk() {
+  export JAVA_HOME=$(/usr/libexec/java_home -v $1)
+}
+
+# enable colors in iTerm2
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+# export NPM (node.js package manager)
+export NODE_PATH=/usr/local/lib/node_modules
+
+# set editor for git commit log messages
+export GIT_EDITOR='vim'
+
+# MAVEN
+export MAVEN_OPTS="-noverify -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Xmx512M"

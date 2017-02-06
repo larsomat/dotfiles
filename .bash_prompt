@@ -116,3 +116,6 @@ export PS1;
 
 PS2="\[${yellow}\]→ \[${reset}\]";
 export PS2;
+
+# customize prompt with icons, color codes and git repo
+#PS1="🍺  \[\033[0;37m\][\u@\h:\[\033[0;36m\]\w\[\033[0;37m\]]\[\033[0;32m\]\$(__git_ps1)\[\033[0;37m\] \$ "

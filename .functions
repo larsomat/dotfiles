@@ -169,3 +169,14 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# "up" n directories: e.g "up 4" moves you 4 directories up the path
+function up() {
+ LIMIT=$1
+ P=$PWD
+ for ((i=1; i <= LIMIT; i++))
+ do
+  P=$P/..
+ done
+ cd $P
+}

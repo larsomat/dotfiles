@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "Starting simple http server on localhost:8000 for current directory.."
+echo "(Exit with CTRL-C)"
+python -m SimpleHTTPServer

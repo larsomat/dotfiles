@@ -7,7 +7,7 @@
 	s = status -s
 
 	# Show the diff between the latest commit and the current state
-	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+	diffy = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
 	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
 	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
@@ -16,7 +16,7 @@
 	p = pull --recurse-submodules
 
 	# Clone a repository including all submodules
-	c = clone --recursive
+	#c = clone --recursive
 
 	# Commit all changes
 	ca = !git add -A && git commit -av
@@ -82,6 +82,43 @@
 	# Show the user email for the current repository.
 	whoami = config user.email
 
+
+###
+# custom
+##
+
+	ba = branch -vva
+	br = branch -a
+	ci = commit
+	co = checkout
+	d = checkout develop
+	dailylog = log --since '1 day ago' --oneline --author campe@silpion.de
+	df = diff
+	# Remove branches that have already been merged with master
+	# a.k.a. ‘delete merged’
+	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	draft = "!sh -c 'git push origin HEAD:refs/drafts/$1' -"
+	f = fetch -v
+	fixup = commit --amned -C HEAD
+	gca = git commit --amend
+	human = name-rev --name-only --refs=refs/heads/*
+	la = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(dim white)%s%C(reset) %C(ul white)- %an%C(reset)%C(yellow)%d%C(reset)' --all
+	last = log -1 HEAD
+	lg = log --graph --prettyformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
+	lg = log -p
+	ll = log --graph --decorate --oneline --abbrev-commit
+	lo = log --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(dim white)%s%C(reset) %C(ul white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+	pi = cherry-pick
+	publish = "!sh -c 'git push origin HEAD:refs/publish/$1' -"
+	puff = pull --ff-only
+	push-sandbox = "!sh -c 'git push --set-upstream origin HEAD:sandbox/larcam/$1' -"
+	rh = reset --hard
+	st = status
+	unstage = reset HEAD --
+
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
@@ -106,9 +143,13 @@
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
 
+
 	# Speed up commands involving untracked files such as `git status`.
 	# https://git-scm.com/docs/git-update-index#_untracked_cache
 	untrackedCache = true
+	trustctime = false
+	precomposeunicode = true
+	autocrlf = input
 
 [color]
 
@@ -140,6 +181,9 @@
 	# https://help.github.com/articles/signing-commits-using-gpg/
 	gpgsign = true
 
+[credential]
+	helper = osxkeychain
+
 [diff]
 
 	# Detect copies as well as renames
@@ -159,6 +203,8 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+
+	stat = true
 
 [push]
 
