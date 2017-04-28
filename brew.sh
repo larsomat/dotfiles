@@ -101,26 +101,26 @@ brew install zopfli
 #brew cleanup
 
 # custom installations
-brew install ansible
-brew install ant
-brew install artifactory
+#brew install ansible
+#brew install ant
+#brew install artifactory
 brew install autoconf
 brew install autojump
 brew install automake
 brew install bash-completion
 brew install boost
-brew install cairo
+#brew install cairo
 brew install cask
-brew install cloog
-brew install cloog018
+#brew install cloog
+#brew install cloog018
 brew install coreutils
 brew install cppunit
 brew install curl
 brew install dark-mode
-brew install docker-machine
-brew install dvm
-brew install faac
-brew install ffmpeg
+#brew install docker-machine
+#brew install dvm
+#brew install faac
+#brew install ffmpeg
 brew install findutils
 brew install fontconfig
 brew install freetype
@@ -137,20 +137,20 @@ brew install gmp
 brew install gmp4
 brew install gnu-sed
 brew install gobject-introspection
-brew install gource
-brew install gradle
-brew install graphviz
-brew install haproxy
-brew install harfbuzz
+#brew install gource
+#brew install gradle
+#brew install graphviz
+#brew install haproxy
+#brew install harfbuzz
 brew install htop-osx
-brew install hugo
-brew install icu4c
-brew install isl
-brew install isl011
-brew install isl014
+#brew install hugo
+#brew install icu4c
+#brew install isl
+#brew install isl011
+#brew install isl014
 brew install jenv
 brew install jpeg
-brew install lame
+#brew install lame
 brew install libcroco
 brew install libffi
 brew install libmpc
@@ -166,7 +166,7 @@ brew install lzo
 brew install make
 brew install makedepend
 brew install maven
-brew install mongodb
+#brew install mongodb
 brew install moreutils
 brew install mpfr
 brew install mpfr2
@@ -174,9 +174,9 @@ brew install mtr
 brew install mysql
 brew install ncftp
 brew install node
-brew install openssh
-brew install openssl
-brew install openssl@1.1
+#brew install openssh
+#brew install openssl
+#brew install openssl@1.1
 brew install p7zip
 brew install pango
 brew install pcre
@@ -192,7 +192,7 @@ brew install sdl2
 brew install sdl2_image
 brew install selenium-server-standalone
 brew install shared-mime-info
-brew install sqlite
+#brew install sqlite
 brew install tcpflow
 brew install texi2html
 brew install the_silver_searcher
@@ -211,10 +211,10 @@ brew install zsh
 # casks
 brew cask install atom
 brew cask install dash
-brew cask install dosbox
+#brew cask install dosbox
 brew cask install dropbox
 brew cask install filezilla
-brew cask install firefox
+#brew cask install firefox
 brew cask install flux
 brew cask install google-chrome
 brew cask install iterm2
@@ -223,10 +223,10 @@ brew cask install keepassx
 brew cask install libreoffice
 brew cask install moom
 brew cask install mou
-brew cask install omnidisksweeper
-brew cask install real-vnc
+#brew cask install omnidisksweeper
+#brew cask install real-vnc
 brew cask install robomongo
-brew cask install scummvm
+#brew cask install scummvm
 brew cask install slack
 brew cask install sonos
 brew cask install sourcetree
@@ -236,3 +236,4 @@ brew cask install visualvm
 brew cask install vlc
 brew cask install vnc-viewer
 brew cask install yed
+brew cask install spotify
