@@ -62,3 +62,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 #else
 #  eval $( gpg-agent --daemon --write-env-file ~/.gpg-agent-info )
 #fi
+
+# automatically add all known SSH keys to the ssh-agent
+ssh-add -A 2> /dev/null;
