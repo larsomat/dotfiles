@@ -55,4 +55,4 @@ export NODE_PATH=/usr/local/lib/node_modules
 export GIT_EDITOR='vim'
 
 # MAVEN
-export MAVEN_OPTS="-noverify -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Xmx512M"
+export MAVEN_OPTS="-noverify -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Xmx512M -Djavax.xml.accessExternalSchema=all"
