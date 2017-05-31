@@ -64,4 +64,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 #fi
 
 # automatically add all known SSH keys to the ssh-agent
-ssh-add -A 2> /dev/null;
+ssh-add -A 2> /dev/null
+
+# Switch to ITerm2 Default Profile
+echo -e "\033]50;SetProfile=Default\a";
