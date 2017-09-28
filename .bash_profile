@@ -68,3 +68,6 @@ ssh-add -A 2> /dev/null
 
 # Switch to ITerm2 Default Profile
 echo -e "\033]50;SetProfile=Default\a";
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
