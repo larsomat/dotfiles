@@ -173,3 +173,6 @@ alias sniff="sudo tcpflow -i en0 -C -e port 80"
 alias mci="mvn clean install -DnoChanges.skip=true"
 alias mcist="mvn clean install -DnoChanges.skip=true -Dmaven.test.skip=true"
 alias mnv="mvn versions:set -DnewVersion="
+
+# Mailhog
+alias mh="sudo mailhog -smtp-bind-addr 0.0.0.0:25"
