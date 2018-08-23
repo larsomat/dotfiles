@@ -176,3 +176,7 @@ alias mnv="mvn versions:set -DnewVersion="
 
 # Mailhog
 alias mh="sudo mailhog -smtp-bind-addr 0.0.0.0:25"
+
+# Postgres
+alias pgup="pg_ctl -D /usr/local/var/postgres start"
+alias pgdown="pg_ctl -D /usr/local/var/postgres stop"

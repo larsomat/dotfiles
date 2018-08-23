@@ -65,3 +65,9 @@ export PATH=$PATH:$GOROOT/bin
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH=$PATH:$HOME/.rvm/bin
+
+# Apache Spark
+export SPARK_LOCAL_IP="127.0.0.1"
+
+# NVM (Node Version Manager)
+export NVM_DIR="$HOME/.nvm"

@@ -71,3 +71,6 @@ echo -e "\033]50;SetProfile=Default\a";
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# NVM (Node Version Manager)
+. "/usr/local/opt/nvm/nvm.sh"
