@@ -39,7 +39,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1;
 
 
 # set automagic java home to default and custom version
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$(/usr/libexec/java_home -v 11.0)
 setjdk() {
   export JAVA_HOME=$(/usr/libexec/java_home -v $1)
 }
@@ -64,11 +64,11 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH=$PATH:$HOME/.rvm/bin
-
 # Apache Spark
 export SPARK_LOCAL_IP="127.0.0.1"
 
 # NVM (Node Version Manager)
 export NVM_DIR="$HOME/.nvm"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
