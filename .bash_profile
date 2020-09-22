@@ -74,3 +74,6 @@ echo -e "\033]50;SetProfile=Default\a";
 
 # NVM (Node Version Manager)
 . "/usr/local/opt/nvm/nvm.sh"
+
+# Git Bash Completion
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
